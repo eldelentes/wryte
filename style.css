@@ -106,7 +106,7 @@ body.is-dark .themeControl:before {
 }
 
 body.is-dark #logo {
-	fill: #fff;
+	fill: #fff	;
 }
 
 body.is-serif,
