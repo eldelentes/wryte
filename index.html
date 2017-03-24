@@ -1,56 +1,27 @@
-<html manifest="meta">
-<head>
-	<title>Wryte</title>
-	<meta charset="utf-8">
-	<style>
-		@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
-		textarea {
-			font-size: 1.7em;
-			font-family:'Noto Sans' 'sans-serif';
-			width: 100%;
-			height: 100%;
-			border: none;
-			outline: none;
-			padding:5% 20%;}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Wryte</title>
+		<meta charset="utf-8">
 
-	h1 {
-		font-family: 'Noto Sans';
-		margin: 0px;
-		border: 8px solid;
-		padding: 3px;
-		width: 80px;
-		text-align: center;
-		font-weight: bold;
-		font-size: 14pt;
-		margin-left: 20%;
-		opacity: .2;
-	}
-	</style>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>
-	$(document).ready(function() {
-	var old_value = localStorage.getItem('value');
-	$('textarea').val(old_value);
-	$('textarea').on('keyup', function(event) {
-	var value = $(this).val();
-	localStorage.setItem("value", value);
-	});
-	});
-</script>
-<script type="text/javascript">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Neuton|Noto+Sans" rel="stylesheet">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-40005201-1']);
-  _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-</head>
-<h1>Wryte</h1>
-<textarea autofocus placeholder="Just write
-"/>
+	</head>
+	<body>
+		<div class="logo">
+			<svg width="26px" height="26px" viewBox="488 309 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			    <defs></defs>
+			    <path d="M488,310.997005 C488,309.894089 488.894979,309 489.997005,309 L512.002995,309 C513.105911,309 514,309.894979 514,310.997005 L514,333.002995 C514,334.105911 513.105021,335 512.002995,335 L489.997005,335 C488.894089,335 488,334.105021 488,333.002995 L488,310.997005 Z M492.045666,318.650014 L494.379405,327.359647 C494.565643,328.054696 495.283407,328.476676 495.979368,328.290193 C496.680182,328.102411 497.087378,327.384744 496.899704,326.684335 L494.565965,317.974702 C494.379727,317.279653 493.661963,316.857673 492.966002,317.044156 C492.265188,317.231938 491.857992,317.949605 492.045666,318.650014 Z M499.648179,324.992749 L500.068533,326.561529 C500.253879,327.25325 500.970429,327.6707 501.66639,327.484217 C502.367204,327.296435 502.775343,326.582286 502.588831,325.886217 L502.168478,324.317437 C501.983132,323.625716 501.266582,323.208267 500.57062,323.394749 C499.869807,323.582532 499.461668,324.29668 499.648179,324.992749 Z M509.945731,318.650014 C510.133405,317.949605 509.726209,317.231938 509.025396,317.044156 C508.329434,316.857673 507.61167,317.279653 507.425432,317.974702 L505.091693,326.684335 C504.904019,327.384744 505.311216,328.102411 506.012029,328.290193 C506.70799,328.476676 507.425755,328.054696 507.611992,327.359647 L509.945731,318.650014 Z" id="logo" stroke="none" fill-rule="evenodd"></path>
+			</svg>
+		</div>
+		<nav class="controls">
+			<a href="#" class="uiControl themeControl"></a>
+			<a href="#" class="uiControl fontControl">A</a>
+		</nav>
+		<textarea class="textField" autofocus placeholder="Just write.."></textarea>
+		<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>

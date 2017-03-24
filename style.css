@@ -1,0 +1,116 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+	position: relative;
+	height: 100%;
+	height: 100vh;
+	width: 100%;
+	width: 100vw;
+	font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+	background: yellow;
+}
+
+.logo {
+	position: fixed;
+	left: 2em;
+	top: 2em;
+}
+
+.textField {
+	background: transparent;
+	border: 0;
+	outline: 0;
+	height: 100%;
+	width: 100vw;
+	display: block;
+	font-size: 1.4em;
+	padding: 10vw;
+}
+
+.controls {
+	position: fixed;
+	right: 1em;
+	top: 1em;
+	text-align: center;
+}
+
+.fontControl {
+	color: #fff;
+	text-decoration: none;
+	padding: 0.1em 0.4em;
+	background: #191D23;
+	border-radius: 0.2em;
+	font-weight: 600;
+	display: block;
+	margin: 0.4em 0;
+}
+
+.themeControl {
+	height: 1em;
+	width: 1em;
+	background: transparent;
+	border: 0.2em solid #191D23;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+}
+
+.uiControl {
+	transition: all 0.2s ease;
+}
+
+.uiControl:hover {
+	transform: scale(1.2);
+}
+
+.uiControl:active {
+	transform: scale(0.8);	
+}
+
+.themeControl:before {
+	content: '';
+	width: 1em;
+	height: 1em;
+	background: #191D23;
+	position: absolute;
+	top: 30%;
+	right: 30%;
+	transform: rotate(45deg);
+}
+
+body.is-dark {
+	background: #222;
+}
+
+body.is-dark .textField {
+	color: #fff;
+}
+
+body.is-dark .themeControl {
+	border-color: #fff;
+}
+
+body.is-dark .themeControl:before {
+	background: #fff;
+}
+
+body.is-dark #logo {
+	fill: #fff;
+}
+
+body.is-serif,
+body.is-serif .textField,
+body.is-serif .fontControl {
+	font-family: 'Neuton', serif;
+}
