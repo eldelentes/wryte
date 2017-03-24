@@ -42,6 +42,7 @@ body {
 	right: 1em;
 	top: 1em;
 	text-align: center;
+	z-index: 1;
 }
 
 .fontControl {
