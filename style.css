@@ -115,3 +115,10 @@ body.is-serif .textField,
 body.is-serif .fontControl {
 	font-family: 'Neuton', serif;
 }
+
+
+@media (max-width: 50em) {
+	.textField {
+		padding: 10vh 10vw;
+	}
+}
